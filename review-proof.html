@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><title>مراجعة سند — متجر النور</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Tajawal',sans-serif}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+  <aside id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-white border-l z-50 flex flex-col transform translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="p-5 border-b flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">ن</div>
+        <div><div class="font-bold text-sm">متجر النور</div><div class="text-xs text-gray-500">الباقة الاحترافية</div></div>
+      </div>
+      <button id="closeSidebar" class="lg:hidden p-1.5 hover:bg-gray-100 rounded-lg">✕</button>
+    </div>
+    <nav class="flex-1 p-3 space-y-0.5 text-sm overflow-y-auto">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📊 لوحة التحكم</a>
+      <a href="products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📦 المنتجات</a>
+      <a href="orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">🛒 الطلبات</a>
+      <a href="review-proof.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-indigo-50 text-indigo-700 font-medium">📋 السندات <span class="mr-auto bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">12</span></a>
+      <a href="promotions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">🎟️ العروض</a>
+      <a href="returns.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">↩️ المرتجعات</a>
+      <a href="staff.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">👥 الموظفون</a>
+      <a href="reports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📈 التقارير</a>
+    </nav>
+  </aside>
+  <main class="lg:mr-64">
+    <div class="bg-white border-b sticky top-0 z-30 px-4 lg:px-6 py-3 flex items-center gap-3">
+      <button id="openSidebar" class="lg:hidden p-2 border rounded-lg">☰</button>
+      <a href="orders.html" class="p-2 hover:bg-gray-100 rounded-lg">←</a>
+      <div class="flex-1 min-w-0"><div class="text-xs text-gray-500">مراجعة سند</div><div class="font-bold truncate">#ORD-2026-000123</div></div>
+      <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 text-amber-800 text-sm rounded-full">قيد المراجعة</span>
+    </div>
+    <div class="p-4 lg:p-6 grid lg:grid-cols-5 gap-4 lg:gap-6">
+      <div class="lg:col-span-2 space-y-4">
+        <div class="bg-white rounded-xl border p-4 lg:p-5">
+          <h3 class="font-bold mb-4">معلومات العميل</h3>
+          <div class="flex items-center gap-3 mb-4 pb-4 border-b">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold">أع</div>
+            <div><div class="font-medium">أحمد العلي</div><div class="text-sm text-gray-500">عميل جديد</div></div>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3"><span>📱</span><div><div class="text-gray-500 text-xs">الهاتف</div><div>0501234567</div></div></div>
+            <div class="flex items-start gap-3"><span>📍</span><div><div class="text-gray-500 text-xs">العنوان</div><div>الرياض، حي النخيل، شارع الملك فهد، مبنى 123</div></div></div>
+            <div class="flex items-start gap-3"><span>✉️</span><div><div class="text-gray-500 text-xs">البريد</div><div class="break-all">ahmed@example.com</div></div></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border p-4 lg:p-5">
+          <h3 class="font-bold mb-4">المنتجات</h3>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 pb-3 border-b">
+              <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center text-2xl flex-shrink-0">👕</div>
+              <div class="flex-1 min-w-0"><div class="font-medium text-sm">قميص قطني كلاسيكي</div><div class="text-xs text-gray-500">أبيض · M · × 2</div></div>
+              <div class="font-medium">178.00</div>
+            </div>
+            <div class="flex items-center gap-3 pb-3 border-b">
+              <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center text-2xl flex-shrink-0">👟</div>
+              <div class="flex-1 min-w-0"><div class="font-medium text-sm">حذاء رياضي أبيض</div><div class="text-xs text-gray-500">مقاس 42 · × 1</div></div>
+              <div class="font-medium">249.00</div>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t space-y-2 text-sm">
+            <div class="flex justify-between text-gray-600"><span>المجموع الفرعي</span><span>427.00</span></div>
+            <div class="flex justify-between text-gray-600"><span>الشحن</span><span>23.00</span></div>
+            <div class="flex justify-between font-bold text-base pt-2 border-t"><span>الإجمالي</span><span>450.00 ر.س</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-3 space-y-4">
+        <div class="bg-white rounded-xl border p-4 lg:p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold">صورة السند</h3>
+            <div class="flex gap-2">
+              <button class="px-2 lg:px-3 py-1.5 text-xs lg:text-sm border rounded-lg">🔍 تكبير</button>
+              <button class="hidden sm:block px-3 py-1.5 text-sm border rounded-lg">⬇️ تنزيل</button>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-xl h-64 lg:h-96 flex items-center justify-center">
+            <div class="text-center"><div class="text-7xl lg:text-8xl mb-2">🧾</div><div class="text-sm text-gray-500">sند_تحويل_12345.jpg</div></div>
+          </div>
+          <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-800 flex gap-2">
+            <span>💡</span><span>تحقق من مطابقة المبلغ والتاريخ مع حسابك البنكي قبل الموافقة.</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border p-4 lg:p-5">
+          <h3 class="font-bold mb-4">التحقق والمراجعة</h3>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div class="p-3 bg-gray-50 rounded-lg"><div class="text-xs text-gray-500 mb-1">المبلغ المتوقع</div><div class="text-lg lg:text-xl font-bold">450.00 ر.س</div></div>
+            <div class="p-3 bg-indigo-50 rounded-lg"><div class="text-xs text-indigo-600 mb-1">رقم العملية</div><div class="text-sm font-medium">123456789</div></div>
+          </div>
+          <label class="flex items-start gap-3 p-3 lg:p-4 bg-amber-50 border border-amber-200 rounded-lg cursor-pointer mb-4">
+            <input type="checkbox" class="w-5 h-5 mt-0.5 rounded" checked>
+            <div class="text-sm"><div class="font-medium text-amber-900">أؤكد أنني تحققت من الحساب البنكي واستلمت المبلغ</div><div class="text-amber-700 text-xs mt-1">يُسجَّل في سجل التدقيق</div></div>
+          </label>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">ملاحظات داخلية</label>
+            <textarea rows="2" placeholder="لن تظهر للعميل" class="w-full px-4 py-2.5 border rounded-lg text-sm resize-none"></textarea>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button class="flex-1 py-3 bg-green-600 text-white font-medium rounded-lg">✓ تأكيد الاستلام</button>
+            <button class="flex-1 py-3 border-2 border-red-300 text-red-600 font-medium rounded-lg">✕ رفض السند</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const s=document.getElementById('sidebar'),o=document.getElementById('sidebarOverlay'),b=document.getElementById('openSidebar'),c=document.getElementById('closeSidebar');
+    b&&b.addEventListener('click',()=>{s.classList.remove('translate-x-full');o.classList.remove('hidden')});
+    c&&c.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+    o&&o.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+  </script>
+</body>
+</html>

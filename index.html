@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>متجري — نموذج المنصة الكامل</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'Tajawal',sans-serif}
+    .gradient-bg{background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#a855f7 100%)}
+    .card-hover{transition:all .25s}
+    .card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px -10px rgba(79,70,229,.25)}
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero -->
+  <div class="gradient-bg text-white py-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-2xl font-bold">م</div>
+        <div>
+          <div class="text-2xl font-bold">متجري</div>
+          <div class="text-sm text-indigo-200">نموذج المنصة الكامل</div>
+        </div>
+      </div>
+      <h1 class="text-5xl font-bold leading-tight mb-4">النموذج التفاعلي<br>لمنصة التجارة الإلكترونية SaaS</h1>
+      <p class="text-indigo-100 text-lg max-w-2xl leading-relaxed">
+        استعرض كل شاشات المنصة: من واجهة العميل إلى لوحة التاجر، إلى لوحة مالك المنصة.
+        جميع الشاشات قابلة للتصفح والتفاعل مباشرة في المتصفح.
+      </p>
+      <div class="flex gap-3 mt-8 flex-wrap">
+        <span class="px-3 py-1.5 bg-white/10 backdrop-blur rounded-full text-sm">✅ 27 شاشة</span>
+        <span class="px-3 py-1.5 bg-white/10 backdrop-blur rounded-full text-sm">🎨 RTL كامل</span>
+        <span class="px-3 py-1.5 bg-white/10 backdrop-blur rounded-full text-sm">📱 متجاوب</span>
+        <span class="px-3 py-1.5 bg-white/10 backdrop-blur rounded-full text-sm">⚡ Tailwind CSS</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- Storefront -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-xl">🛍️</div>
+        <div>
+          <h2 class="text-2xl font-bold">واجهة العميل (Storefront)</h2>
+          <p class="text-sm text-gray-500">ما يراه العميل عند تصفح المتجر والشراء</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="home.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🏠</div>
+          <div class="font-bold mb-1">الصفحة الرئيسية</div>
+          <p class="text-xs text-gray-500">Hero + تصنيفات + منتجات مميزة</p>
+        </a>
+        <a href="category.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🔍</div>
+          <div class="font-bold mb-1">تصفح / بحث</div>
+          <p class="text-xs text-gray-500">فلاتر + ترتيب + Pagination</p>
+        </a>
+        <a href="product.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">👕</div>
+          <div class="font-bold mb-1">صفحة المنتج</div>
+          <p class="text-xs text-gray-500">صور + مقاسات + ألوان + تقييمات</p>
+        </a>
+        <a href="cart.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🛒</div>
+          <div class="font-bold mb-1">سلة التسوق</div>
+          <p class="text-xs text-gray-500">تعديل الكميات + كوبون</p>
+        </a>
+        <a href="checkout.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📦</div>
+          <div class="font-bold mb-1">إتمام الطلب</div>
+          <p class="text-xs text-gray-500">شحن + طريقة دفع</p>
+        </a>
+        <a href="upload-proof.html" class="card-hover bg-white rounded-xl border p-5 block ring-2 ring-indigo-500">
+          <div class="text-3xl mb-3">🧾</div>
+          <div class="font-bold mb-1">رفع السند ⭐</div>
+          <p class="text-xs text-gray-500">معلومات البنك + رفع الصورة</p>
+        </a>
+        <a href="confirmation.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">✓</div>
+          <div class="font-bold mb-1">تأكيد الطلب</div>
+          <p class="text-xs text-gray-500">ملخص + CTA لرفع السند</p>
+        </a>
+        <a href="my-orders.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📋</div>
+          <div class="font-bold mb-1">طلباتي</div>
+          <p class="text-xs text-gray-500">قائمة + Tabs للحالات</p>
+        </a>
+        <a href="order-detailus.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📄</div>
+          <div class="font-bold mb-1">تفاصيل طلب</div>
+          <p class="text-xs text-gray-500">Timeline + سند + شحن</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Auth -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-xl">🔐</div>
+        <div>
+          <h2 class="text-2xl font-bold">المصادقة والتسجيل</h2>
+          <p class="text-sm text-gray-500">تسجيل الدخول وإنشاء المتجر</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="login.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🔑</div>
+          <div class="font-bold mb-1">تسجيل الدخول</div>
+          <p class="text-xs text-gray-500">نموذج بسيط مع "تذكرني"</p>
+        </a>
+        <a href="register.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">✨</div>
+          <div class="font-bold mb-1">تسجيل تاجر جديد</div>
+          <p class="text-xs text-gray-500">Wizard 4 خطوات</p>
+        </a>
+        <a href="pending-approval.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">⏳</div>
+          <div class="font-bold mb-1">قيد المراجعة</div>
+          <p class="text-xs text-gray-500">صفحة انتظار الموافقة</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Tenant -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl">🏪</div>
+        <div>
+          <h2 class="text-2xl font-bold">لوحة التاجر</h2>
+          <p class="text-sm text-gray-500">ما يديره صاحب المتجر يومياً</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="dashboard.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📊</div>
+          <div class="font-bold mb-1">لوحة التحكم</div>
+          <p class="text-xs text-gray-500">إحصائيات + تنبيهات + طلبات حديثة</p>
+        </a>
+        <a href="products.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📦</div>
+          <div class="font-bold mb-1">المنتجات</div>
+          <p class="text-xs text-gray-500">جدول + فلاتر + حالة المخزون</p>
+        </a>
+        <a href="product-create.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">➕</div>
+          <div class="font-bold mb-1">إنشاء منتج</div>
+          <p class="text-xs text-gray-500">صور + SKU + SEO</p>
+        </a>
+        <a href="orders.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🛒</div>
+          <div class="font-bold mb-1">الطلبات</div>
+          <p class="text-xs text-gray-500">Tabs + بحث</p>
+        </a>
+        <a href="order-detail.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📄</div>
+          <div class="font-bold mb-1">تفاصيل الطلب</div>
+          <p class="text-xs text-gray-500">منتجات + سند + شحن</p>
+        </a>
+        <a href="review-proof.html" class="card-hover bg-white rounded-xl border p-5 block ring-2 ring-amber-500">
+          <div class="text-3xl mb-3">🧾</div>
+          <div class="font-bold mb-1">مراجعة السند ⭐</div>
+          <p class="text-xs text-gray-500">الأكثر استخداماً يومياً</p>
+        </a>
+        <a href="promotions.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🎟️</div>
+          <div class="font-bold mb-1">العروض</div>
+          <p class="text-xs text-gray-500">خصومات + كوبونات</p>
+        </a>
+        <a href="returns.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">↩️</div>
+          <div class="font-bold mb-1">المرتجعات</div>
+          <p class="text-xs text-gray-500">RMA + استرداد</p>
+        </a>
+        <a href="staff.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">👥</div>
+          <div class="font-bold mb-1">الموظفون</div>
+          <p class="text-xs text-gray-500">دعوات + أدوار</p>
+        </a>
+        <a href="reports.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📈</div>
+          <div class="font-bold mb-1">التقارير</div>
+          <p class="text-xs text-gray-500">مبيعات + أفضل المنتجات</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Admin -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-10 h-10 rounded-xl bg-gray-800 flex items-center justify-center text-xl text-white">👑</div>
+        <div>
+          <h2 class="text-2xl font-bold">لوحة مالك المنصة</h2>
+          <p class="text-sm text-gray-500">ما تراه أنت (Super Admin) لمراقبة المنصة</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="dashboardad.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📊</div>
+          <div class="font-bold mb-1">لوحة المنصة</div>
+          <p class="text-xs text-gray-500">GMV + تجار + إيرادات</p>
+        </a>
+        <a href="tenants.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">🏪</div>
+          <div class="font-bold mb-1">التجار</div>
+          <p class="text-xs text-gray-500">قائمة + مراجعة + تعليق</p>
+        </a>
+        <a href="subscriptions.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">💳</div>
+          <div class="font-bold mb-1">الاشتراكات</div>
+          <p class="text-xs text-gray-500">MRR + تجديدات</p>
+        </a>
+        <a href="plans.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📦</div>
+          <div class="font-bold mb-1">الباقات</div>
+          <p class="text-xs text-gray-500">CRUD للباقات</p>
+        </a>
+        <a href="audit-log.html" class="card-hover bg-white rounded-xl border p-5 block">
+          <div class="text-3xl mb-3">📋</div>
+          <div class="font-bold mb-1">سجل التدقيق</div>
+          <p class="text-xs text-gray-500">كل العمليات الحساسة</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-sm text-gray-500 border-t">
+      <div class="font-bold text-gray-900 mb-1">متجري — منصة التجارة الإلكترونية SaaS</div>
+      <div>  المبرمج علاء إبراهيم الصنوي· 2026</div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

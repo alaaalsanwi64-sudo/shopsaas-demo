@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم — متجر النور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Tajawal', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Overlay (خلفية معتمة على الجوال فقط) -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar"
+    class="fixed right-0 top-0 h-full w-64 bg-white border-l border-gray-200 flex flex-col z-50
+           transform translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+
+    <!-- Header (مع زر إغلاق للجوال) -->
+    <div class="p-5 border-b flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">ن</div>
+        <div class="flex-1">
+          <div class="font-bold text-gray-900 text-sm" </div> متجر بنت الجميل</div>
+          <div class="text-xs text-gray-500">الباقة الاحترافية</div>
+        </div>
+      </div>
+      <button id="closeSidebar" class="lg:hidden p-1.5 hover:bg-gray-100 rounded-lg">
+        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex-1 p-3 space-y-0.5 overflow-y-auto">
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-indigo-50 text-indigo-700 font-medium text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        لوحة التحكم
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        المنتجات
+        <span class="mr-auto text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">45/50</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        الطلبات
+        <span class="mr-auto bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">8</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        السندات المعلقة
+        <span class="mr-auto bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">12</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+        العروض والخصومات
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+        المرتجعات
+        <span class="mr-auto bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">2</span>
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        العملاء
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        التقارير
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100 text-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        الإعدادات
+      </a>
+    </nav>
+
+    <div class="p-3 border-t">
+      <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+        <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-sm font-bold text-gray-700">أع</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium text-gray-900 truncate">علاء الصنوي</div>
+          <div class="text-xs text-gray-500 truncate">alaa@store.com</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="lg:mr-64 p-4 lg:p-8">
+
+    <!-- Mobile Top Bar (يظهر فقط على الجوال) -->
+    <div class="lg:hidden flex items-center justify-between mb-4">
+      <button id="openSidebar" class="p-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-sm">ن</div>
+        <span class="font-bold text-gray-900 text-sm">متجر بنت الجميل</span>
+      </div>
+      <div class="w-10"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-6">
+      <div>
+        <h1 class="text-xl lg:text-2xl font-bold text-gray-900">صباح الخير، ايات  👋</h1>
+        <p class="text-gray-500 text-sm mt-1">هذا ملخص أداء متجرك اليوم</p>
+      </div>
+      <div class="flex gap-2">
+        <button class="px-3 lg:px-4 py-2 text-sm border border-gray-200 rounded-lg hover:bg-white flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          آخر 30 يوم
+        </button>
+        <a href="#" class="px-3 lg:px-4 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          منتج جديد
+        </a>
+      </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl flex-shrink-0">⚠️</div>
+      <div class="flex-1">
+        <div class="font-medium text-amber-900 text-sm">لديك 12 سنداً بانتظار المراجعة</div>
+        <div class="text-sm text-amber-700">أقدمها منذ 5 ساعات. راجعها لتجنب تأخير الشحن.</div>
+      </div>
+      <a href="06-review-proof.html" class="w-full sm:w-auto text-center px-4 py-2 bg-amber-600 text-white text-sm rounded-lg hover:bg-amber-700">مراجعة الآن</a>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-6">
+      <div class="bg-white rounded-xl border p-4 lg:p-5">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs lg:text-sm text-gray-500">إجمالي المبيعات</span>
+          <div class="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-indigo-50 flex items-center justify-center">
+            <svg class="w-4 h-4 lg:w-5 lg:h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+        </div>
+        <div class="text-lg lg:text-2xl font-bold text-gray-900">24,850 ر.س</div>
+        <div class="text-xs text-green-600 flex items-center gap-1 mt-1 flex-wrap">
+          <span>▲ 12.5%</span>
+          <span class="text-gray-400 hidden sm:inline">مقارنة بالشهر الماضي</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-4 lg:p-5">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs lg:text-sm text-gray-500">الطلبات</span>
+          <div class="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-green-50 flex items-center justify-center">
+            <svg class="w-4 h-4 lg:w-5 lg:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </div>
+        </div>
+        <div class="text-lg lg:text-2xl font-bold text-gray-900">142</div>
+        <div class="text-xs text-green-600 flex items-center gap-1 mt-1 flex-wrap">
+          <span>▲ 8.2%</span>
+          <span class="text-gray-400 hidden sm:inline">منذ الشهر الماضي</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-4 lg:p-5">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs lg:text-sm text-gray-500">متوسط قيمة الطلب</span>
+          <div class="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-blue-50 flex items-center justify-center">
+            <svg class="w-4 h-4 lg:w-5 lg:h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+        </div>
+        <div class="text-lg lg:text-2xl font-bold text-gray-900">175 ر.س</div>
+        <div class="text-xs text-red-600 flex items-center gap-1 mt-1 flex-wrap">
+          <span>▼ 2.1%</span>
+          <span class="text-gray-400 hidden sm:inline">مقارنة بالشهر الماضي</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-4 lg:p-5">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs lg:text-sm text-gray-500">معدل تأكيد السندات</span>
+          <div class="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-amber-50 flex items-center justify-center">
+            <svg class="w-4 h-4 lg:w-5 lg:h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+        </div>
+        <div class="text-lg lg:text-2xl font-bold text-gray-900">94%</div>
+        <div class="text-xs text-gray-500 mt-1">12 سند بانتظار المراجعة</div>
+      </div>
+    </div>
+
+    <!-- Two Columns -->
+    <div class="grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-white rounded-xl border p-4 lg:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-bold text-gray-900 text-sm lg:text-base">المبيعات آخر 7 أيام</h3>
+          <select class="text-xs lg:text-sm border rounded-lg px-2 py-1.5">
+            <option>آخر 7 أيام</option>
+            <option>آخر 30 يوم</option>
+          </select>
+        </div>
+        <div class="h-40 lg:h-48 flex items-end justify-between gap-1.5 lg:gap-2">
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 60%"></div><span class="text-[10px] lg:text-xs text-gray-500">السبت</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 80%"></div><span class="text-[10px] lg:text-xs text-gray-500">الأحد</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 45%"></div><span class="text-[10px] lg:text-xs text-gray-500">الاثنين</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 70%"></div><span class="text-[10px] lg:text-xs text-gray-500">الثلاثاء</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 90%"></div><span class="text-[10px] lg:text-xs text-gray-500">الأربعاء</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 55%"></div><span class="text-[10px] lg:text-xs text-gray-500">الخميس</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full bg-indigo-500 rounded-t" style="height: 100%"></div><span class="text-[10px] lg:text-xs text-gray-500">الجمعة</span></div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-4 lg:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-bold text-gray-900 text-sm lg:text-base">آخر الطلبات</h3>
+          <a href="#" class="text-sm text-indigo-600">الكل</a>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 pb-3 border-b">
+            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold">أع</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-gray-900 truncate">#000123 · أحمد العلي</div>
+              <div class="text-xs text-gray-500">450 ر.س · منذ 5 دقائق</div>
+            </div>
+            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded whitespace-nowrap">معلق</span>
+          </div>
+          <div class="flex items-center gap-3 pb-3 border-b">
+            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold">سم</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-gray-900 truncate">#000122 · سارة محمد</div>
+              <div class="text-xs text-gray-500">1,200 ر.س · منذ 15 دقيقة</div>
+            </div>
+            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded whitespace-nowrap">مدفوع</span>
+          </div>
+          <div class="flex items-center gap-3 pb-3 border-b">
+            <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold">خس</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-gray-900 truncate">#000121 · خالد سعيد</div>
+              <div class="text-xs text-gray-500">320 ر.س · منذ ساعة</div>
+            </div>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded whitespace-nowrap">مشحون</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Sidebar Toggle (Mobile)
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const openBtn = document.getElementById('openSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+
+    function openSidebar() {
+      sidebar.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+    }
+    function closeSidebar() {
+      sidebar.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openSidebar);
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
+  </script>
+
+</body>
+</html>

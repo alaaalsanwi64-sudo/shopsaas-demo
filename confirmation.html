@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تم تأكيد طلبك — متجر النور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style> body { font-family: 'Tajawal', sans-serif; } </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <header class="bg-white border-b">
+    <div class="max-w-3xl mx-auto px-6 py-4 flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">ن</div>
+      <span class="text-lg font-bold text-gray-900">متجر النور</span>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-10">
+
+    <!-- Success -->
+    <div class="text-center mb-8">
+      <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">شكراً لك، أحمد!</h1>
+      <p class="text-gray-600">تم استلام طلبك بنجاح. رقم الطلب: <span class="font-bold text-gray-900">#ORD-2026-000123</span></p>
+    </div>
+
+    <!-- Next Step -->
+    <div class="bg-gradient-to-l from-amber-500 to-orange-500 rounded-2xl p-6 text-white mb-6">
+      <div class="flex items-start gap-4">
+        <div class="text-3xl">⏳</div>
+        <div class="flex-1">
+          <div class="font-bold text-lg mb-1">الخطوة التالية: رفع سند التحويل</div>
+          <p class="text-sm text-orange-100 mb-4">لم يكتمل طلبك بعد. ارفع صورة السند لبدء التحقق من الدفع.</p>
+          <a href="04-upload-proof.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-100">
+            رفع السند الآن →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="bg-white rounded-xl border p-6 mb-6">
+      <h2 class="font-bold text-gray-900 mb-4">تفاصيل الطلب</h2>
+
+      <div class="space-y-3 mb-5 pb-5 border-b">
+        <div class="flex items-center gap-3">
+          <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-2xl">👕</div>
+          <div class="flex-1">
+            <div class="font-medium text-gray-900 text-sm">قميص قطني كلاسيكي</div>
+            <div class="text-xs text-gray-500">أبيض · M · × 2</div>
+          </div>
+          <div class="font-medium text-gray-900">178.00 ر.س</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-2xl">👟</div>
+          <div class="flex-1">
+            <div class="font-medium text-gray-900 text-sm">حذاء رياضي أبيض</div>
+            <div class="text-xs text-gray-500">مقاس 42 · × 1</div>
+          </div>
+          <div class="font-medium text-gray-900">249.00 ر.س</div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+        <div>
+          <div class="text-gray-500 mb-1">عنوان الشحن</div>
+          <div class="text-gray-900">أحمد العلي<br>الرياض، حي النخيل، شارع الملك فهد، مبنى 123</div>
+        </div>
+        <div>
+          <div class="text-gray-500 mb-1">طريقة الدفع</div>
+          <div class="text-gray-900">تحويل بنكي</div>
+          <div class="text-xs text-amber-600 mt-1">⏳ بانتظار رفع السند</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="bg-white rounded-xl border p-6 mb-6">
+      <div class="flex justify-between mb-2 text-sm"><span class="text-gray-600">المجموع الفرعي</span><span>427.00 ر.س</span></div>
+      <div class="flex justify-between mb-2 text-sm"><span class="text-gray-600">الشحن</span><span>23.00 ر.س</span></div>
+      <div class="flex justify-between pt-3 border-t font-bold text-lg"><span>الإجمالي</span><span>450.00 ر.س</span></div>
+    </div>
+
+    <div class="flex gap-3">
+      <a href="12-my-orders.html" class="flex-1 py-3 text-center border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50">عرض طلباتي</a>
+      <a href="02-store-home.html" class="flex-1 py-3 text-center bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700">متابعة التسوق</a>
+    </div>
+
+  </main>
+
+</body>
+</html>

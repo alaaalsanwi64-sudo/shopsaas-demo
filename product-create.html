@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><title>منتج جديد — متجر النور</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Tajawal',sans-serif}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <header class="bg-white border-b sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-3">
+      <a href="products.html" class="p-2 hover:bg-gray-100 rounded-lg">←</a>
+      <div class="flex-1"><div class="text-sm text-gray-500">المنتجات</div><div class="font-bold">منتج جديد</div></div>
+      <button class="px-4 py-2 text-sm border rounded-lg hover:bg-gray-50">حفظ كمسودة</button>
+      <button class="px-4 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">نشر المنتج</button>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-6 py-6 grid lg:grid-cols-3 gap-6">
+
+    <div class="lg:col-span-2 space-y-4">
+      <div class="bg-white rounded-xl border p-6">
+        <h2 class="font-bold mb-4">معلومات أساسية</h2>
+        <div class="space-y-4">
+          <div><label class="block text-sm font-medium mb-1.5">اسم المنتج</label>
+            <input type="text" placeholder="مثال: قميص قطني كلاسيكي" class="w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"></div>
+          <div><label class="block text-sm font-medium mb-1.5">الوصف</label>
+            <textarea rows="4" placeholder="وصف تفصيلي للمنتج..." class="w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea></div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div><label class="block text-sm font-medium mb-1.5">السعر (ر.س)</label>
+              <input type="number" placeholder="89.00" class="w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none" dir="ltr"></div>
+            <div><label class="block text-sm font-medium mb-1.5">السعر قبل الخصم (اختياري)</label>
+              <input type="number" placeholder="129.00" class="w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none" dir="ltr"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-6">
+        <h2 class="font-bold mb-4">الصور</h2>
+        <div class="border-2 border-dashed rounded-xl p-8 text-center hover:border-indigo-400 cursor-pointer">
+          <div class="text-4xl mb-2">🖼️</div>
+          <div class="font-medium text-sm">اسحب الصور هنا أو انقر للاختيار</div>
+          <div class="text-xs text-gray-500 mt-1">JPG، PNG — حتى 5MB لكل صورة</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-bold">المتغيرات (SKU)</h2>
+          <button class="text-sm text-indigo-600 font-medium">+ إضافة متغير</button>
+        </div>
+        <div class="space-y-3">
+          <div class="grid grid-cols-5 gap-2 p-3 bg-gray-50 rounded-lg">
+            <input type="text" placeholder="اللون" value="أبيض" class="px-3 py-2 border rounded text-sm bg-white">
+            <input type="text" placeholder="المقاس" value="M" class="px-3 py-2 border rounded text-sm bg-white">
+            <input type="text" placeholder="SKU" value="SHIRT-WHT-M" class="px-3 py-2 border rounded text-sm bg-white font-mono">
+            <input type="number" placeholder="مخزون" value="25" class="px-3 py-2 border rounded text-sm bg-white" dir="ltr">
+            <button class="px-3 py-2 text-red-600 text-sm hover:bg-red-50 rounded">حذف</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white rounded-xl border p-5">
+        <h3 class="font-bold mb-3 text-sm">تصنيف</h3>
+        <select class="w-full px-3 py-2 border rounded-lg text-sm"><option>ملابس</option><option>أحذية</option></select>
+      </div>
+      <div class="bg-white rounded-xl border p-5">
+        <h3 class="font-bold mb-3 text-sm">الحالة</h3>
+        <select class="w-full px-3 py-2 border rounded-lg text-sm"><option>منشور</option><option>مسودة</option></select>
+      </div>
+      <div class="bg-white rounded-xl border p-5">
+        <h3 class="font-bold mb-3 text-sm">تحسين محركات البحث</h3>
+        <input type="text" placeholder="عنوان SEO" class="w-full px-3 py-2 border rounded-lg text-sm mb-2">
+        <textarea rows="2" placeholder="وصف SEO" class="w-full px-3 py-2 border rounded-lg text-sm resize-none"></textarea>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><title>لوحة المنصة — متجري Admin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Tajawal',sans-serif}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+  <aside id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-gray-900 text-white z-50 flex flex-col transform translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="p-5 border-b border-gray-800 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold">م</div>
+        <div><div class="font-bold text-sm">متجري Admin</div><div class="text-xs text-gray-400">مالك المنصة</div></div>
+      </div>
+      <button id="closeSidebar" class="lg:hidden p-1.5 hover:bg-gray-800 rounded-lg text-white">✕</button>
+    </div>
+    <nav class="flex-1 p-3 space-y-0.5 text-sm overflow-y-auto">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-indigo-600 font-medium">📊 لوحة المنصة</a>
+      <a href="tenants.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:bg-gray-800">🏪 التجار <span class="mr-auto bg-amber-500 text-xs px-2 py-0.5 rounded-full">3</span></a>
+      <a href="subscriptions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:bg-gray-800">💳 الاشتراكات</a>
+      <a href="plans.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:bg-gray-800">📦 الباقات</a>
+      <a href="audit-log.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:bg-gray-800">📋 سجل التدقيق</a>
+    </nav>
+  </aside>
+  <main class="lg:mr-64 p-4 lg:p-8">
+    <div class="lg:hidden flex items-center justify-between mb-4">
+      <button id="openSidebar" class="p-2 bg-white border rounded-lg">☰</button>
+      <span class="font-bold text-sm">متجري Admin</span>
+      <div class="w-10"></div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+      <div><h1 class="text-xl lg:text-2xl font-bold">لوحة المنصة</h1><p class="text-sm text-gray-500 mt-1">نظرة عامة على أداء المنصة</p></div>
+      <select class="px-4 py-2 border rounded-lg text-sm"><option>آخر 30 يوم</option><option>آخر 7 أيام</option></select>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-6">
+      <div class="bg-white rounded-xl border p-4 lg:p-5"><div class="text-xs text-gray-500 mb-1">إجمالي GMV</div><div class="text-lg lg:text-2xl font-bold">1,245,800</div><div class="text-xs text-green-600 mt-1">▲ 18.4%</div></div>
+      <div class="bg-white rounded-xl border p-4 lg:p-5"><div class="text-xs text-gray-500 mb-1">التجار النشطون</div><div class="text-lg lg:text-2xl font-bold">47</div><div class="text-xs text-green-600 mt-1">▲ 5 جدد</div></div>
+      <div class="bg-white rounded-xl border p-4 lg:p-5"><div class="text-xs text-gray-500 mb-1">إيراد الاشتراكات</div><div class="text-lg lg:text-2xl font-bold">12,450</div><div class="text-xs text-green-600 mt-1">▲ 6.2%</div></div>
+      <div class="bg-white rounded-xl border p-4 lg:p-5"><div class="text-xs text-gray-500 mb-1">بانتظار الموافقة</div><div class="text-lg lg:text-2xl font-bold text-amber-600">3</div><div class="text-xs text-gray-500 mt-1">طلب جديد</div></div>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-4 lg:gap-6">
+      <div class="lg:col-span-2 bg-white rounded-xl border p-4 lg:p-6">
+        <h3 class="font-bold mb-4">نمو المنصة</h3>
+        <div class="h-48 lg:h-56 flex items-end justify-between gap-1.5 lg:gap-2">
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:40%"></div><span class="text-[10px] lg:text-xs text-gray-500">مايو</span></div>
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:55%"></div><span class="text-[10px] lg:text-xs text-gray-500">يونيو</span></div>
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:65%"></div><span class="text-[10px] lg:text-xs text-gray-500">يوليو</span></div>
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:72%"></div><span class="text-[10px] lg:text-xs text-gray-500">أغسطس</span></div>
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:85%"></div><span class="text-[10px] lg:text-xs text-gray-500">سبتمبر</span></div>
+          <div class="flex-1 flex flex-col items-center gap-1"><div class="w-full bg-indigo-500 rounded-t" style="height:100%"></div><span class="text-[10px] lg:text-xs text-gray-500">أكتوبر</span></div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border p-4 lg:p-6">
+        <h3 class="font-bold mb-4">طلبات تاجر جديدة</h3>
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 pb-3 border-b"><div class="w-9 h-9 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold flex-shrink-0">ن</div><div class="flex-1 min-w-0"><div class="text-sm font-medium truncate">متجر النور</div><div class="text-xs text-gray-500">منذ 5 دقائق</div></div><a href="tenants.html" class="text-xs text-indigo-600 font-medium whitespace-nowrap">مراجعة</a></div>
+          <div class="flex items-center gap-2 pb-3 border-b"><div class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold flex-shrink-0">أ</div><div class="flex-1 min-w-0"><div class="text-sm font-medium truncate">أزياء الرياض</div><div class="text-xs text-gray-500">منذ ساعة</div></div><a href="tenants.html" class="text-xs text-indigo-600 font-medium whitespace-nowrap">مراجعة</a></div>
+          <div class="flex items-center gap-2"><div class="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold flex-shrink-0">ه</div><div class="flex-1 min-w-0"><div class="text-sm font-medium truncate">هوم ستايل</div><div class="text-xs text-gray-500">منذ 3 ساعات</div></div><a href="tenants.html" class="text-xs text-indigo-600 font-medium whitespace-nowrap">مراجعة</a></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const s=document.getElementById('sidebar'),o=document.getElementById('sidebarOverlay'),b=document.getElementById('openSidebar'),c=document.getElementById('closeSidebar');
+    b&&b.addEventListener('click',()=>{s.classList.remove('translate-x-full');o.classList.remove('hidden')});
+    c&&c.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+    o&&o.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+  </script>
+</body>
+</html>

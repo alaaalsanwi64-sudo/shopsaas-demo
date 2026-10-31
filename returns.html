@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><title>المرتجعات — متجر النور</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Tajawal',sans-serif}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+  <aside id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-white border-l z-50 flex flex-col transform translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="p-5 border-b flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold">ن</div>
+        <div><div class="font-bold text-sm">متجر النور</div><div class="text-xs text-gray-500">الباقة الاحترافية</div></div>
+      </div>
+      <button id="closeSidebar" class="lg:hidden p-1.5 hover:bg-gray-100 rounded-lg">✕</button>
+    </div>
+    <nav class="flex-1 p-3 space-y-0.5 text-sm overflow-y-auto">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📊 لوحة التحكم</a>
+      <a href="products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📦 المنتجات</a>
+      <a href="orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">🛒 الطلبات</a>
+      <a href="review-proof.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📋 السندات</a>
+      <a href="promotions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">🎟️ العروض</a>
+      <a href="returns.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-indigo-50 text-indigo-700 font-medium">↩️ المرتجعات</a>
+      <a href="staff.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">👥 الموظفون</a>
+      <a href="reports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-700 hover:bg-gray-100">📈 التقارير</a>
+    </nav>
+  </aside>
+  <main class="lg:mr-64 p-4 lg:p-8">
+    <div class="lg:hidden flex items-center justify-between mb-4">
+      <button id="openSidebar" class="p-2 bg-white border rounded-lg">☰</button>
+      <span class="font-bold text-sm">متجر النور</span>
+      <div class="w-10"></div>
+    </div>
+    <h1 class="text-xl lg:text-2xl font-bold mb-6">المرتجعات</h1>
+    <div class="space-y-3">
+      <div class="bg-white rounded-xl border p-4 lg:p-5">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+          <div class="font-bold">#RET-2026-00008 <span class="text-xs text-gray-500 font-normal">· طلب #ORD-2026-000102</span></div>
+          <span class="self-start px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">قيد المراجعة</span>
+        </div>
+        <p class="text-sm text-gray-600 mb-3">السبب: منتج تالف</p>
+        <div class="text-sm mb-3"><span class="text-gray-500">المبلغ المطلوب:</span> <span class="font-bold">189.00 ر.س</span></div>
+        <div class="flex gap-2">
+          <button class="px-4 py-1.5 bg-green-600 text-white text-xs rounded-lg">قبول</button>
+          <button class="px-4 py-1.5 border border-red-300 text-red-600 text-xs rounded-lg">رفض</button>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border p-4 lg:p-5 opacity-70">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+          <div class="font-bold">#RET-2026-00007 <span class="text-xs text-gray-500 font-normal">· طلب #ORD-2026-000089</span></div>
+          <span class="self-start px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">مقبول</span>
+        </div>
+        <p class="text-sm text-gray-600">السبب: لم يطابق الوصف</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    const s=document.getElementById('sidebar'),o=document.getElementById('sidebarOverlay'),b=document.getElementById('openSidebar'),c=document.getElementById('closeSidebar');
+    b&&b.addEventListener('click',()=>{s.classList.remove('translate-x-full');o.classList.remove('hidden')});
+    c&&c.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+    o&&o.addEventListener('click',()=>{s.classList.add('translate-x-full');o.classList.add('hidden')});
+  </script>
+</body>
+</html>
